@@ -16,7 +16,7 @@ module.exports = (path, data, parameters) => {
   if (path && data) {
     // Make path as a header
     res.push(`### ${path}`);
-    res.push('---');
+    res.push('');
 
     // Check if parameter for path are in the place
     if ('parameters' in data) {
@@ -40,6 +40,7 @@ module.exports = (path, data, parameters) => {
           res.push(`**Description:** ${pathInfo.description}\n`);
         }
 
+        /*
         // Build parameters
         if ('parameters' in pathInfo || pathParameters) {
           res.push(`${transformParameters(pathInfo.parameters, pathParameters, parameters)}\n`);
@@ -49,6 +50,7 @@ module.exports = (path, data, parameters) => {
         if ('responses' in pathInfo) {
           res.push(`${transformResponses(pathInfo.responses)}\n`);
         }
+        */
 
         // Build security
         if ('security' in pathInfo) {
