@@ -40,12 +40,12 @@ module.exports = (path, data, parameters) => {
           res.push(`**Description:** ${pathInfo.description}\n`);
         }
 
-        /*
+        
         // Build parameters
         if ('parameters' in pathInfo || pathParameters) {
           res.push(`${transformParameters(pathInfo.parameters, pathParameters, parameters)}\n`);
         }
-
+        /*
         // Build responses
         if ('responses' in pathInfo) {
           res.push(`${transformResponses(pathInfo.responses)}\n`);
