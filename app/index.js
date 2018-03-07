@@ -62,10 +62,12 @@ if (args.input) {
       )));
     }
 
+    /*
     // Models (definitions)
     if ('definitions' in inputDoc) {
       document.push(transformDefinition(inputDoc.definitions));
     }
+    */
 
     fs.writeFile(outputFile, document.join('\n'), err => {
       if (err) {
