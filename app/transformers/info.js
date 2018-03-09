@@ -11,17 +11,21 @@ const transformLicense = require('./license');
 module.exports = info => {
   const res = [];
   if (info !== null && typeof info === 'object') {
+    /*
     if ('title' in info) {
       res.push(`#${info.title}\n`);
     }
+    */
 
     if ('description' in info) {
       res.push(`${info.description}\n`);
     }
 
+    /*
     if ('version' in info) {
       res.push(`**Version:** ${info.version}\n`);
     }
+    */
 
     if ('termsOfService' in info) {
       res.push(`**Terms of service:**  \n${info.termsOfService}\n`);
